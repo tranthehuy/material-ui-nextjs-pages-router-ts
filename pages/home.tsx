@@ -1,11 +1,10 @@
 import * as React from 'react';
 import Container from '@mui/material/Container';
 import Typography from '@mui/material/Typography';
-import Link from '@mui/material/Link';
 import Box from '@mui/material/Box';
-import LayoutSection from '../src/components/Layout';
-import TypographySection from '../src/components/Typography';
+import Link from '../src/components/Link';
 
+import Copyright from '../src/components/Copyright';
 
 export default function Home() {
   return (
@@ -16,20 +15,17 @@ export default function Home() {
           display: 'flex',
           flexDirection: 'column',
           justifyContent: 'center',
-          alignPapers: 'center',
+          alignItems: 'center',
         }}
       >
-        <Link href="https://mui.com/material-ui/all-components/" target="_blank">   
-            Starter Repo Material UI - Next.js example in TypeScript
-        </Link>
         <Typography variant="h4" component="h1" sx={{ mb: 2 }}>
-          Demo components
+          Starter Repo Material UI - Next.js example in TypeScript
         </Typography>
+        <Link href="/about" color="secondary">
+          Go to the about page
+        </Link>
+        <Copyright />
       </Box>
-
-      <LayoutSection />
-      <br />
-      <TypographySection />
     </Container>
   );
 }
