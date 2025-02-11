@@ -1,11 +1,9 @@
-import * as React from 'react';
 import Container from '@mui/material/Container';
 import Typography from '@mui/material/Typography';
 import Link from '@mui/material/Link';
 import Box from '@mui/material/Box';
-import LayoutSection from '../src/components/Layout';
-import TypographySection from '../src/components/Typography';
-
+import LayoutSection from '../src/sections/Layout';
+import TypographySection from '../src/sections/Typography';
 
 export default function Home() {
   return (
@@ -23,7 +21,7 @@ export default function Home() {
             Starter Repo Material UI - Next.js example in TypeScript
         </Link>
         <Typography variant="h4" component="h1" sx={{ mb: 2 }}>
-          Demo components
+          MUI components - Design Language Page
         </Typography>
       </Box>
 
