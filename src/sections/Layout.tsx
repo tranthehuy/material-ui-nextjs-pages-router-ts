@@ -20,9 +20,9 @@ const content = `
     </Box>
 `
 
-export default function Layout() {
+export default function LayoutSection() {
     return (
-        <ExamplesTab title="Layout" description={content}>
+        <ExamplesTab title="Layout" description={content} id="layout">
             <Box sx={{ flexGrow: 1 }}>
                 <Grid container spacing={2}>
                     <Grid size={4}>

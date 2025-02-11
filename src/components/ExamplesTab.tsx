@@ -38,10 +38,11 @@ interface ExamplesTabProps {
   children?: React.ReactNode;
   title?: string;
   description?: string;
+  id?: string;
 }
 
 export default function ExamplesTab(props: ExamplesTabProps) {
-  const { children, description, title } = props;
+  const { children, description, title, id } = props;
   const [value, setValue] = React.useState(0);
 
   const handleChange = (event: React.SyntheticEvent, newValue: number) => {
@@ -50,7 +51,7 @@ export default function ExamplesTab(props: ExamplesTabProps) {
 
   return (
     <Box>
-        <Link href="#layout">
+        <Link id={id}>
             <Typography variant="h4" component="h3" sx={{ mb: 2 }}>
                 {title}
             </Typography>
