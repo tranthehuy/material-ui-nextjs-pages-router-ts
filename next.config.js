@@ -1,6 +1,8 @@
 /** @type {import('next').NextConfig} */
 module.exports = {
-  // if we want to build a server files, plese remove next line
-  output: 'export',
+  
   reactStrictMode: true,
+  // if we want to build a server files, plese remove output and basePath attributes
+  output: 'export',
+  basePath: "/nextjs-github-pages"
 };
