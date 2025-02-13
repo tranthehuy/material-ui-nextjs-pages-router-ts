@@ -4,6 +4,7 @@ import Tab from '@mui/material/Tab';
 import Box from '@mui/material/Box';
 import Link from '@mui/material/Link';
 import Typography from '@mui/material/Typography';
+import CodePreview from './CodePreview';
 
 interface TabPanelProps {
   children?: React.ReactNode;
@@ -51,26 +52,28 @@ export default function ExamplesTab(props: ExamplesTabProps) {
 
   return (
     <Box>
-        <Link id={id}>
-            <Typography variant="h4" component="h3" sx={{ mb: 2 }}>
-                {title}
-            </Typography>
-        </Link>
-        <br />
-        <Box sx={{ width: '100%' }}>
-          <Box sx={{ borderBottom: 1, borderColor: 'divider' }}>
-            <Tabs value={value} onChange={handleChange} aria-label="basic tabs example">
-              <Tab label="Preview" {...a11yProps(0)} />
-              <Tab label="Code" {...a11yProps(1)} />
-            </Tabs>
-          </Box>
-          <CustomTabPanel value={value} index={0}>
-            {children}
-          </CustomTabPanel>
-          <CustomTabPanel value={value} index={1}>
-            <pre>{description}</pre>
-          </CustomTabPanel>
+      <Link id={id}>
+        <Typography variant="h4" component="h3" sx={{ mb: 2 }}>
+          {title}
+        </Typography>
+      </Link>
+      <br />
+      <Box sx={{ width: '100%' }}>
+        <Box sx={{ borderBottom: 1, borderColor: 'divider' }}>
+          <Tabs value={value} onChange={handleChange} aria-label="basic tabs example">
+            <Tab label="Preview" {...a11yProps(0)} />
+            <Tab label="Code" {...a11yProps(1)} />
+          </Tabs>
         </Box>
+        <CustomTabPanel value={value} index={0}>
+          {children}
+        </CustomTabPanel>
+        <CustomTabPanel value={value} index={1}>
+          <CodePreview
+            description={description}
+          />
+        </CustomTabPanel>
+      </Box>
     </Box>
   );
 }
