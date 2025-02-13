@@ -5,6 +5,7 @@ import Box from '@mui/material/Box';
 import LayoutSection from '../src/sections/Layout';
 import TypographySection from '../src/sections/Typography';
 import ButtonSection from '../src/sections/Button';
+import FormSection from '../src/sections/Form';
 
 import Grid from '@mui/material/Grid2';
 import List from '@mui/material/List';
@@ -66,6 +67,8 @@ export default function Home() {
             </List>
           </Grid>
           <Grid size={8}>
+            <FormSection />
+            <br />
             <LayoutSection />
             <br />
             <TypographySection />
