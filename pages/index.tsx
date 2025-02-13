@@ -8,12 +8,7 @@ import ButtonSection from '../src/sections/Button';
 import FormSection from '../src/sections/Form';
 
 import Grid from '@mui/material/Grid2';
-import List from '@mui/material/List';
-import ListItem from '@mui/material/ListItem';
-import ListItemButton from '@mui/material/ListItemButton';
-import ListItemIcon from '@mui/material/ListItemIcon';
-import ListItemText from '@mui/material/ListItemText';
-import LaunchIcon from '@mui/icons-material/Launch';
+import SideMenu from '../src/components/SideMenu';
 
 export default function Home() {
   return (
@@ -38,34 +33,7 @@ export default function Home() {
 
       <Box sx={{ flexGrow: 1 }}>
         <Grid container spacing={2}>
-          <Grid size={4}>
-            <List>
-              <ListItem disablePadding>
-                <ListItemButton>
-                  <ListItemIcon>
-                    <LaunchIcon />
-                  </ListItemIcon>
-                  <ListItemText primary={<Link href="#layout">Layout</Link>} />
-                </ListItemButton>
-              </ListItem>
-              <ListItem disablePadding>
-                <ListItemButton>
-                  <ListItemIcon>
-                    <LaunchIcon />
-                  </ListItemIcon>
-                  <ListItemText primary={<Link href="#title">Title</Link>} />
-                </ListItemButton>
-              </ListItem>
-              <ListItem disablePadding>
-                <ListItemButton>
-                  <ListItemIcon>
-                    <LaunchIcon />
-                  </ListItemIcon>
-                  <ListItemText primary={<Link href="#button">Button and Icon</Link>} />
-                </ListItemButton>
-              </ListItem>
-            </List>
-          </Grid>
+          <SideMenu />
           <Grid size={8}>
             <FormSection />
             <br />

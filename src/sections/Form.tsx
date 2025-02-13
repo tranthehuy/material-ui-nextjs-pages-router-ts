@@ -90,7 +90,7 @@ export default function FormSection() {
     });
 
     return (
-        <ExamplesTab title="Form" description={content} id="button">
+        <ExamplesTab title="Form" description={content} id="form">
             <Box>
                 <form onSubmit={formik.handleSubmit}>
                     <Stack spacing={2}>
