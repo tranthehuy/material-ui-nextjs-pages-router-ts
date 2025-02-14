@@ -1,4 +1,5 @@
-import { Paper, Link, List, ListItem, ListItemButton, ListItemIcon, ListItemText, Typography } from '@mui/material';
+import { Paper, List, ListItem, ListItemButton, ListItemIcon, ListItemText, Typography } from '@mui/material';
+import Link from "./Link";
 import LaunchIcon from '@mui/icons-material/Launch';
 
 interface SideMenuProps { }
