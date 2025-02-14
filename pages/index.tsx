@@ -13,7 +13,6 @@ import SideMenu from '../src/components/SideMenu';
 export default function Home() {
   return (
     <Container maxWidth="lg">
-
       <Box
         sx={{
           my: 4,
@@ -34,6 +33,7 @@ export default function Home() {
       <Box sx={{ flexGrow: 1 }}>
         <Grid container spacing={2}>
           <SideMenu />
+
           <Grid size={8}>
             <FormSection />
             <br />
@@ -43,6 +43,7 @@ export default function Home() {
             <br />
             <ButtonSection />
           </Grid>
+
         </Grid>
       </Box>
     </Container>
