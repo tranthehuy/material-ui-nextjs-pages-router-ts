@@ -16,7 +16,9 @@ export default function Home() {
     <Container maxWidth="lg">
       <Box sx={{ flexGrow: 1 }}>
         <Grid container spacing={2}>
-          <SideMenu />
+          <Grid size={4}>
+            <SideMenu />
+          </Grid>
           <Grid size={8}>
             <Header />
             <FormSection />
