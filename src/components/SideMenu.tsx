@@ -1,4 +1,4 @@
-import { Paper, Grid2 as Grid, Link, List, ListItem, ListItemButton, ListItemIcon, ListItemText } from '@mui/material';
+import { Paper, Grid2 as Grid, Link, List, ListItem, ListItemButton, ListItemIcon, ListItemText, Typography } from '@mui/material';
 import LaunchIcon from '@mui/icons-material/Launch';
 
 interface SideMenuProps { }
@@ -6,6 +6,8 @@ interface SideMenuProps { }
 export default function SideMenu(props: SideMenuProps) {
     return (
         <Grid size={4}>
+            <br />
+            <Typography variant="h4" component="h4" sx={{ mb: 2 }}>Basic</Typography>
             <Paper>
                 <List>
                     <Link href="#form">

@@ -19,6 +19,9 @@ const validationSchema = yup.object({
 });
 
 const content = `
+import { useFormik } from 'formik';
+import * as yup from 'yup';
+
 const validationSchema = yup.object({
   email: yup
     .string('Enter your email')
