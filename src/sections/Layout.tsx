@@ -1,12 +1,8 @@
-import Box from '@mui/material/Box';
-import Paper from '@mui/material/Paper';
-import Grid from '@mui/material/Grid2';
+import { Box, Grid2 as Grid, Paper } from '@mui/material';
 import ExamplesTab from '../components/ExamplesTab';
 
 const content = `
-    import Box from '@mui/material/Box';
-    import Paper from '@mui/material/Paper';
-    import Grid from '@mui/material/Grid2';
+    import { Box, Grid2 as Grid, Paper } from '@mui/material';
     ...
     <Box sx={{ flexGrow: 1 }}>
     <Grid container spacing={2}>

@@ -1,7 +1,4 @@
-import Button from '@mui/material/Button';
-import TextField from '@mui/material/TextField';
-import Box from '@mui/material/Box';
-import Stack from '@mui/material/Stack';
+import { Box, Button, Stack, TextField } from '@mui/material';
 import ExamplesTab from '../components/ExamplesTab';
 
 import { useFormik } from 'formik';
@@ -19,6 +16,7 @@ const validationSchema = yup.object({
 });
 
 const content = `
+import { Box, Button, Stack, TextField } from '@mui/material';
 import { useFormik } from 'formik';
 import * as yup from 'yup';
 
