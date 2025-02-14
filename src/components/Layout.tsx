@@ -1,5 +1,4 @@
-import Box from "@mui/material/Box";
-import Grid from "@mui/material/Grid2";
+import { Box, Grid2 as Grid } from "@mui/material";
 
 interface LayoutProps {
     children?: React.ReactNode;
