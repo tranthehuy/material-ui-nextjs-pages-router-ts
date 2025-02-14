@@ -53,7 +53,7 @@ export default function SideMenu(props: SideMenuProps) {
                 </List>
             </Paper>
             <br />
-            <Typography variant="h4" component="h4" sx={{ mb: 2 }}>Forms</Typography>
+            <Typography variant="h4" component="h4" sx={{ mb: 2 }}>Advanced</Typography>
             <Paper>
                 <List>
                     <Link href="/form">
@@ -62,7 +62,7 @@ export default function SideMenu(props: SideMenuProps) {
                                 <ListItemIcon>
                                     <LaunchIcon />
                                 </ListItemIcon>
-                                <ListItemText primary="Sign Up Form" />
+                                <ListItemText primary="Forms" />
                             </ListItemButton>
                         </ListItem>
                     </Link>
