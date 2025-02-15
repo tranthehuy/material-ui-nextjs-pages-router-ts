@@ -10,6 +10,7 @@ import {
 } from "@mui/material";
 import Header from "../src/components/Header";
 import Layout from "../src/components/Layout";
+import SignUpFormSection from "../src/sections/SignUpForm";
 
 export default function Form() {
   return (
@@ -31,6 +32,7 @@ export default function Form() {
       </Paper>
     </>}>
       <Header />
+      <SignUpFormSection />
     </Layout>
   );
 }
