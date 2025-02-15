@@ -1,4 +1,4 @@
-import { Box, Button, Stack, TextField } from "@mui/material";
+import { Box, Button, Checkbox, FormControl, FormControlLabel, FormLabel, Radio, RadioGroup, Stack, TextField } from "@mui/material";
 import ExamplesTab from "../components/ExamplesTab";
 
 import { useFormik } from "formik";
@@ -41,44 +41,77 @@ export default function SignUpFormSection() {
   });
 
   return (
-      <Box>
-        <Form formik={formik}>
-          <Stack spacing={2}>
-            <FormItem
-              id="email"
-              name="email"
-              label="Email"
-              fullWidth
-              formik={formik}
-            >
-              {(fieldProps: FormikProps) => <TextField {...fieldProps} />}
-            </FormItem>
-            <FormItem
-              id="password"
-              name="password"
-              label="Password"
-              fullWidth
-              type="password"
-              formik={formik}
-            >
-              {(fieldProps: FormikProps) => <TextField {...fieldProps} />}
-            </FormItem>
-            <FormItem
-              id="repassword"
-              name="repassword"
-              label="Confirm"
-              fullWidth
-              type="password"
-              formik={formik}
-            >
-              {(fieldProps: FormikProps) => <TextField {...fieldProps} />}
-            </FormItem>
-            <Button color="primary" variant="contained" fullWidth type="submit">
-              Submit
-            </Button>
-          </Stack>
-        </Form>
-      </Box>
+    <Box>
+      <Form formik={formik}>
+        <Stack spacing={2}>
+          <FormItem
+            id="email"
+            name="email"
+            label="Email"
+            fullWidth
+            formik={formik}
+          >
+            {(fieldProps: FormikProps) => <TextField {...fieldProps} />}
+          </FormItem>
+          <FormItem
+            id="password"
+            name="password"
+            label="Password"
+            fullWidth
+            type="password"
+            formik={formik}
+          >
+            {(fieldProps: FormikProps) => <TextField {...fieldProps} />}
+          </FormItem>
+          <FormItem
+            id="repassword"
+            name="repassword"
+            label="Confirm Password"
+            fullWidth
+            type="password"
+            formik={formik}
+          >
+            {(fieldProps: FormikProps) => <TextField {...fieldProps} />}
+          </FormItem>
+          <FormItem
+            id="gender"
+            name="gender"
+            label="Gender"
+            fullWidth
+            formik={formik}
+          >
+            {(fieldProps: FormikProps) => 
+              <FormControl>
+                <FormLabel id={fieldProps.label}>Gender</FormLabel>
+                <RadioGroup
+                  aria-labelledby={fieldProps.label}
+                  defaultValue="female"
+                  {...fieldProps}
+                >
+                  <FormControlLabel value="female" control={<Radio />} label="Female" />
+                  <FormControlLabel value="male" control={<Radio />} label="Male" />
+                  <FormControlLabel value="other" control={<Radio />} label="Other" />
+                </RadioGroup>
+              </FormControl>
+            }
+          </FormItem>
+          <FormItem
+            id="confirm"
+            name="confirm"
+            label="I confirm that I agreed this website policy"
+            fullWidth
+            formik={formik}
+          >
+            {(fieldProps: FormikProps) =>
+              <FormControlLabel control={<Checkbox {...fieldProps} checked={fieldProps.value} />} label={fieldProps.label} />
+            }
+          </FormItem>
+          <Button color="primary" variant="contained" fullWidth type="submit">
+            Submit
+          </Button>
+        </Stack>
+      </Form>
+    </Box>
   );
 }
 
@@ -90,6 +123,7 @@ export default function SignUpFormSection() {
       email: "foobar@example.com",
       password: "foobar",
       repassword: "",
+      confirm: false
     },
     validationSchema: yup.object({
       email: yup
@@ -109,6 +143,8 @@ export default function SignUpFormSection() {
       alert(JSON.stringify(values, null, 2));
     }
   });
+
+  console.log(formik?.values)
 
   return (
     <ExamplesTab title="Sign Up Form" description={content} id="form">
@@ -137,12 +173,45 @@ export default function SignUpFormSection() {
             <FormItem
               id="repassword"
               name="repassword"
-              label="Confirm"
+              label="Confirm Password"
               fullWidth
               type="password"
               formik={formik}
             >
               {(fieldProps: FormikProps) => <TextField {...fieldProps} />}
+            </FormItem>
+            <FormItem
+              id="gender"
+              name="gender"
+              label="Gender"
+              fullWidth
+              formik={formik}
+            >
+              {(fieldProps: FormikProps) => 
+                <FormControl>
+                  <FormLabel id={fieldProps.label}>Gender</FormLabel>
+                  <RadioGroup
+                    aria-labelledby={fieldProps.label}
+                    defaultValue="female"
+                    {...fieldProps}
+                  >
+                    <FormControlLabel value="female" control={<Radio />} label="Female" />
+                    <FormControlLabel value="male" control={<Radio />} label="Male" />
+                    <FormControlLabel value="other" control={<Radio />} label="Other" />
+                  </RadioGroup>
+                </FormControl>
+              }
+            </FormItem>
+            <FormItem
+              id="confirm"
+              name="confirm"
+              label="I confirm that I agreed this website policy"
+              fullWidth
+              formik={formik}
+            >
+              {(fieldProps: FormikProps) =>
+                <FormControlLabel control={<Checkbox {...fieldProps} checked={fieldProps.value} />} label={fieldProps.label} />
+              }
             </FormItem>
             <Button color="primary" variant="contained" fullWidth type="submit">
               Submit
