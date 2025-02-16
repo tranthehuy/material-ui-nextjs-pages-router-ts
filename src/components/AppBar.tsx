@@ -21,7 +21,6 @@ export default function MenuAppBar(props: MenuAppBarProps) {
 
   const handleMenu = (event: React.MouseEvent<HTMLElement>) => {
     setAnchorEl(event.currentTarget);
-    props.onToogleMenu?.();
   };
 
   const handleClose = () => {
