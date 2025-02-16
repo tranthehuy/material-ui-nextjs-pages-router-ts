@@ -49,7 +49,7 @@ export default function ExamplesTab(props: ExamplesTabProps) {
   return (
     <Box>
       <Link id={id}>
-        <Typography variant="h4" component="h3" sx={{ mb: 2 }}>
+        <Typography variant="h2" component="h2" sx={{ mb: 2 }}>
           {title}
         </Typography>
       </Link>

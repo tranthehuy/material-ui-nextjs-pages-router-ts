@@ -20,7 +20,7 @@ export default function Header(props: HeaderProps) {
       <Link href="https://mui.com/material-ui/all-components/" target="_blank">
         Starter Repo Material UI - Next.js example in TypeScript
       </Link>
-      <Typography variant="h4" component="h1" sx={{ mb: 2 }}>
+      <Typography variant="h1" component="h1" sx={{ mb: 2 }}>
         MUI components - Design Language Page
       </Typography>
     </Box>

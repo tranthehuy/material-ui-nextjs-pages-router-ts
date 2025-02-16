@@ -24,7 +24,7 @@ export default function Form() {
                 <ListItemIcon>
                   <LaunchIcon />
                 </ListItemIcon>
-                <ListItemText primary="Back To Home Page" />
+                <ListItemText primary="Home Page" />
               </ListItemButton>
             </ListItem>
           </Link>
